@@ -7,6 +7,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import { ImageBackground, Text, TouchableOpacity, View } from "react-native";
+import { companyBackground } from "@/constants/Images";
 
 export default function company() {
   const listCompany = [
@@ -38,7 +39,7 @@ export default function company() {
 
   return (
     <ImageBackground
-      source={require("@/assets/images/company.jpg")}
+      source={companyBackground}
       style={{ flex: 1 }}
     >
       <View

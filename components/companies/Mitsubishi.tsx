@@ -1,3 +1,4 @@
+import { mitsubishi } from "@/constants/Images";
 import { Link } from "expo-router";
 import React from "react";
 import { Image, Text, View } from "react-native";
@@ -33,7 +34,7 @@ export default function Mitsubishi() {
           }}
         >
           <Image
-            source={require("@/assets/images/mitsubishi.jpeg")}
+            source={mitsubishi}
             style={{ width: 200, height: 200, borderRadius: 20 }}
           />
         </View>

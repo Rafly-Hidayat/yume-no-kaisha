@@ -1,3 +1,4 @@
+import { quizBackground } from "@/constants/Images";
 import { AntDesign, FontAwesome5 } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import React, { useEffect, useState } from "react";
@@ -31,7 +32,7 @@ export default function index() {
 
   return (
     <ImageBackground
-      source={require("@/assets/images/quizcover.jpg")}
+      source={quizBackground}
       style={{ flex: 1 }}
     >
       <View

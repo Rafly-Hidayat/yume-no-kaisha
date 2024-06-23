@@ -1,4 +1,6 @@
 import ModalAnswer from "@/components/ModalAnswer";
+import { quizBacksound } from "@/constants/Audio";
+import { quizKotobaBackground } from "@/constants/Images";
 import { AntDesign } from "@expo/vector-icons";
 import { Audio } from "expo-av";
 import { useRouter } from "expo-router";
@@ -106,10 +108,10 @@ export default function jobTitle() {
   }, [showModal]);
 
   const playSound = async () => {
-    const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/audio/quizBacksound.mp3"),
-      { isLooping: true, shouldPlay: true }
-    );
+    const { sound } = await Audio.Sound.createAsync(quizBacksound, {
+      isLooping: true,
+      shouldPlay: true,
+    });
     setBacksound(sound);
 
     await sound.playAsync();
@@ -134,10 +136,7 @@ export default function jobTitle() {
   }, [backsound]);
 
   return (
-    <ImageBackground
-      source={require("@/assets/images/quizKotoba.jpg")}
-      style={{ flex: 1 }}
-    >
+    <ImageBackground source={quizKotobaBackground} style={{ flex: 1 }}>
       <ModalAnswer showModal={showModal} isCorrect={isAnswerCorrect} />
       <View
         style={{
@@ -198,7 +197,7 @@ export default function jobTitle() {
                 paddingVertical: 20,
                 width: 300,
                 paddingHorizontal: 20,
-            }}
+              }}
             >
               <Text
                 style={{

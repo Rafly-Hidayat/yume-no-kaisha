@@ -1,3 +1,5 @@
+import { correctBacksound, wrongBacksound } from "@/constants/Audio";
+import { correctAnswer, wrongAnswer } from "@/constants/Images";
 import { Audio } from "expo-av";
 import React, { useEffect, useState } from "react";
 import { Image, Modal, View } from "react-native";
@@ -8,22 +10,15 @@ interface InputProps {
 }
 
 const ModalAnswer: React.FC<InputProps> = ({ showModal, isCorrect }) => {
-  const correctAnswer = require("@/assets/images/correct.png");
-  const wrongAnswer = require("@/assets/images/wrong.png");
-
   const [imageAnswer, setImageAnswer] = useState(correctAnswer);
 
   const playCorrectSound = async () => {
-    const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/audio/correct.mp3")
-    );
+    const { sound } = await Audio.Sound.createAsync(correctBacksound);
     await sound.playAsync();
   };
 
   const playWrongSound = async () => {
-    const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/audio/wrong.mp3")
-    );
+    const { sound } = await Audio.Sound.createAsync(wrongBacksound);
     await sound.playAsync();
   };
 

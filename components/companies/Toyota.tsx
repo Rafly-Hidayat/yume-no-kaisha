@@ -1,3 +1,4 @@
+import { toyota } from "@/constants/Images";
 import { Link } from "expo-router";
 import React from "react";
 import { Image, Text, View } from "react-native";
@@ -33,7 +34,7 @@ export default function Toyota() {
           }}
         >
           <Image
-            source={require("@/assets/images/toyota.png")}
+            source={toyota}
             style={{ width: 200, height: 200, borderRadius: 20 }}
           />
         </View>

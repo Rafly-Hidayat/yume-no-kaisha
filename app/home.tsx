@@ -1,3 +1,4 @@
+import { homeBackground } from "@/constants/Images";
 import { useRouter } from "expo-router";
 import React from "react";
 import {
@@ -18,7 +19,7 @@ export default function Home() {
 
   return (
     <ImageBackground
-      source={require("@/assets/images/home.jpg")}
+      source={homeBackground}
       style={{ flex: 1 }}
     >
       <View

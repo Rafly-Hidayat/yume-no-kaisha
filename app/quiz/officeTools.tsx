@@ -11,24 +11,27 @@ import {
 } from "react-native";
 import { Audio } from "expo-av";
 import ModalAnswer from "@/components/ModalAnswer";
+import {
+  pen,
+  notebook,
+  clip,
+  books,
+  pencil,
+  cabinet,
+  computer,
+  folder,
+  highlither,
+  idcard,
+  perforator,
+  photocopiers,
+  projector,
+  stepler,
+  stickynotes,
+  quizKotobaBackground,
+} from "@/constants/Images";
+import { quizBacksound } from "@/constants/Audio";
 
 export default function officeTools() {
-  const pen = require("@/assets/images/pen.png");
-  const notebook = require("@/assets/images/notebook.png");
-  const clip = require("@/assets/images/clip.png");
-  const books = require("@/assets/images/books.png");
-  const pencil = require("@/assets/images/pencil.png");
-  const cabinet = require("@/assets/images/cabinet.png");
-  const computer = require("@/assets/images/computer.png");
-  const folder = require("@/assets/images/folder.png");
-  const highlither = require("@/assets/images/highlither.png");
-  const idcard = require("@/assets/images/idcard.png");
-  const perforator = require("@/assets/images/perforator.png");
-  const photocopiers = require("@/assets/images/photocopiers.png");
-  const projector = require("@/assets/images/projector.png");
-  const stepler = require("@/assets/images/stepler.png");
-  const stickynotes = require("@/assets/images/stickynotes.png");
-
   const listQuiz = [
     {
       question: " ボールペン ",
@@ -98,10 +101,10 @@ export default function officeTools() {
   }, [showModal]);
 
   const playSound = async () => {
-    const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/audio/quizBacksound.mp3"),
-      { isLooping: true, shouldPlay: true }
-    );
+    const { sound } = await Audio.Sound.createAsync(quizBacksound, {
+      isLooping: true,
+      shouldPlay: true,
+    });
     setBacksound(sound);
 
     await sound.playAsync();
@@ -126,10 +129,7 @@ export default function officeTools() {
   }, [backsound]);
 
   return (
-    <ImageBackground
-      source={require("@/assets/images/quizKotoba.jpg")}
-      style={{ flex: 1 }}
-    >
+    <ImageBackground source={quizKotobaBackground} style={{ flex: 1 }}>
       <ModalAnswer showModal={showModal} isCorrect={isAnswerCorrect} />
       <View
         style={{

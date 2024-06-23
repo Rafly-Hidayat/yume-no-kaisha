@@ -1,3 +1,4 @@
+import { homeBackground } from "@/constants/Images";
 import { useRouter } from "expo-router";
 import { ImageBackground, Text, TouchableOpacity, View, StyleSheet } from "react-native";
 
@@ -6,7 +7,7 @@ export default function Index() {
 
   return (
     <ImageBackground
-      source={require("@/assets/images/home.jpg")}
+      source={homeBackground}
       style={{ flex: 1 }}
     >
       <View

@@ -1,3 +1,4 @@
+import { nintendo } from "@/constants/Images";
 import { Link } from "expo-router";
 import React from "react";
 import { Image, Text, View } from "react-native";
@@ -33,7 +34,7 @@ export default function Nintendo() {
           }}
         >
           <Image
-            source={require("@/assets/images/nintendo.jpeg")}
+            source={nintendo}
             style={{ width: 200, height: 200, borderRadius: 20 }}
           />
         </View>

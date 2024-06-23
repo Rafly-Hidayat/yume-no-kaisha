@@ -1,4 +1,6 @@
 import ModalAnswer from "@/components/ModalAnswer";
+import { quizBacksound } from "@/constants/Audio";
+import { quizHorensoAndSonkaigoBackground } from "@/constants/Images";
 import { AntDesign } from "@expo/vector-icons";
 import { Audio } from "expo-av";
 import { useRouter } from "expo-router";
@@ -110,10 +112,10 @@ export default function horenso() {
   }, [showModal]);
 
   const playSound = async () => {
-    const { sound } = await Audio.Sound.createAsync(
-      require("@/assets/audio/quizBacksound.mp3"),
-      { isLooping: true, shouldPlay: true }
-    );
+    const { sound } = await Audio.Sound.createAsync(quizBacksound, {
+      isLooping: true,
+      shouldPlay: true,
+    });
     setBacksound(sound);
 
     await sound.playAsync();
@@ -139,7 +141,7 @@ export default function horenso() {
 
   return (
     <ImageBackground
-      source={require("@/assets/images/quizHorensoAndSonkaigo.jpg")}
+      source={quizHorensoAndSonkaigoBackground}
       style={{ flex: 1 }}
     >
       <ModalAnswer showModal={showModal} isCorrect={isAnswerCorrect} />
