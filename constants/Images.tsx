@@ -65,6 +65,11 @@ const quizIcon = require("@/assets/images/quizIcon.png");
 const phone = require("@/assets/images/phone.png");
 const tape = require("@/assets/images/tape.png");
 const marker = require("@/assets/images/marker.png");
+const hokoku = require("@/assets/images/hokoku.png");
+const renraku = require("@/assets/images/renraku.png");
+const soudan = require("@/assets/images/soudan.png");
+const sonkeigo = require("@/assets/images/sonkeigo.png");
+const horenso = require("@/assets/images/horenso.jpg");
 
 export {
   pen,
@@ -134,4 +139,9 @@ export {
   phone,
   tape,
   marker,
+  hokoku,
+  renraku,
+  soudan,
+  sonkeigo,
+  horenso,
 };
