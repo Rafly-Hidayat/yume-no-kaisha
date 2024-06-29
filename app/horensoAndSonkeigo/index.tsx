@@ -4,13 +4,10 @@ import { useRouter } from "expo-router";
 import React from "react";
 import { ImageBackground, Text, TouchableOpacity, View } from "react-native";
 
-export default function horensoAndSonkeigo() {
+export default function index() {
   const router = useRouter();
   return (
-    <ImageBackground
-      source={horensoAndSonkeigoBackground}
-      style={{ flex: 1 }}
-    >
+    <ImageBackground source={horensoAndSonkeigoBackground} style={{ flex: 1 }}>
       <View
         style={{
           flex: 1,
@@ -34,12 +31,12 @@ export default function horensoAndSonkeigo() {
               marginVertical: 10,
               width: 300,
             }}
-            onPress={() => router.push("")}
+            onPress={() => router.push("horensoAndSonkeigo/horenso")}
           >
             <Text
               style={{
                 fontSize: 50,
-                fontFamily: "Modak",
+                fontFamily: "LeagueSpartanBold",
                 textDecorationLine: "underline",
                 textAlign: "center",
               }}
@@ -55,12 +52,12 @@ export default function horensoAndSonkeigo() {
               marginVertical: 10,
               width: 300,
             }}
-            onPress={() => router.push("")}
+            onPress={() => router.push("horensoAndSonkeigo/sonkeigo")}
           >
             <Text
               style={{
                 fontSize: 50,
-                fontFamily: "Modak",
+                fontFamily: "LeagueSpartanBold",
                 textDecorationLine: "underline",
                 textAlign: "center",
               }}
