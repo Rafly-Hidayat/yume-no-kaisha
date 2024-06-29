@@ -13,6 +13,7 @@ export default function RootLayout() {
     LeagueSpartan: require('../assets/fonts/LeagueSpartan-Regular.ttf'),
     LeagueSpartanBold: require('../assets/fonts/LeagueSpartan-Bold.ttf'),
     Adigiana: require('../assets/fonts/AdigianaUI.ttf'),
+    DmSerifDisplay: require('../assets/fonts/DMSerifDisplay-Regular.ttf'),
   });
 
   useEffect(() => {
