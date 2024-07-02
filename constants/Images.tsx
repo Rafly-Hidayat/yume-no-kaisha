@@ -68,6 +68,7 @@ const marker = require("@/assets/images/marker.png");
 const hokoku = require("@/assets/images/hokoku.png");
 const renraku = require("@/assets/images/renraku.png");
 const soudan = require("@/assets/images/soudan.png");
+const creditBg = require("@/assets/images/credit.png");
 const sonkeigo = require("@/assets/images/sonkeigo.png");
 const horenso = require("@/assets/images/horenso.jpg");
 
@@ -142,6 +143,7 @@ export {
   hokoku,
   renraku,
   soudan,
+  creditBg,
   sonkeigo,
   horenso,
 };

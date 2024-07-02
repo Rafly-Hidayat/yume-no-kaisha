@@ -1,15 +1,19 @@
 import { homeBackground } from "@/constants/Images";
+import { Entypo, FontAwesome5 } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
-import { ImageBackground, Text, TouchableOpacity, View, StyleSheet } from "react-native";
+import {
+  ImageBackground,
+  Text,
+  TouchableOpacity,
+  View,
+  StyleSheet,
+} from "react-native";
 
 export default function Index() {
   const router = useRouter();
 
   return (
-    <ImageBackground
-      source={homeBackground}
-      style={{ flex: 1 }}
-    >
+    <ImageBackground source={homeBackground} style={{ flex: 1 }}>
       <View
         style={{
           flex: 1,
@@ -63,6 +67,30 @@ export default function Index() {
           >
             START
           </Text>
+        </TouchableOpacity>
+      </View>
+      <View
+        style={{
+          position: "absolute",
+          left: 30,
+          bottom: 20,
+        }}
+      >
+        <TouchableOpacity
+          style={{
+            width: 50,
+            height: 50,
+            borderRadius: 50 / 2,
+            backgroundColor: "#F7ADAF",
+            justifyContent: "center",
+            alignItems: "center",
+            marginVertical: 10,
+            borderColor: "black",
+            borderWidth: 2,
+          }}
+          onPress={() => router.push("credit")}
+        >
+          <Entypo name="info" size={24} color="black" />
         </TouchableOpacity>
       </View>
     </ImageBackground>
