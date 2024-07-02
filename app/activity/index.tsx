@@ -171,7 +171,7 @@ export default function index() {
                   alignItems: "center",
                   marginVertical: 10,
                 }}
-                onPress={() => router.push("horensoAndSonkeigo/")}
+                onPress={() => router.push("horensoAndSonkeigo")}
               >
                 <Image
                   source={horensoAndSonkeigoIcon}
@@ -188,7 +188,7 @@ export default function index() {
                   alignItems: "center",
                   marginVertical: 10,
                 }}
-                onPress={() => router.push("senetence")}
+                onPress={() => router.push("sentence")}
               >
                 <Image
                   source={sentenceIcon}
