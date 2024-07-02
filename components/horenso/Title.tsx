@@ -4,13 +4,7 @@ import { Image, Text, View } from "react-native";
 
 export default function Title() {
   return (
-    <View
-      style={{
-        justifyContent: "center",
-        alignItems: "center",
-        gap: 24,
-      }}
-    >
+    <View style={{ rowGap: 20 }}>
       <View
         style={{
           backgroundColor: "rgba(14, 37, 64, 0.89)",
@@ -31,7 +25,14 @@ export default function Title() {
         >
           horenso
         </Text>
-        <Image source={require("@/assets/images/horenso.jpg")} style={{ width: "100%", height: 250 }} />
+        <View
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Image source={horenso} style={{ width: "100%", height: 200 }} />
+        </View>
       </View>
       <View
         style={{

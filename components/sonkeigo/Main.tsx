@@ -4,19 +4,14 @@ import { Image, Text, View } from "react-native";
 
 export default function Main() {
   return (
-    <View
-      style={{
-        justifyContent: "center",
-        alignItems: "center",
-        gap: 24,
-      }}
-    >
+    <View style={{ rowGap: 20 }}>
       <View
         style={{
           backgroundColor: "rgba(254, 254, 254, 0.89)",
           padding: 25,
           borderRadius: 20,
-          width: "85%",
+          width: 350,
+          alignItems: "center",
         }}
       >
         <Text
@@ -31,14 +26,17 @@ export default function Main() {
         >
           sonkeigo
         </Text>
-        <Image source={sonkeigo} style={{ width: "100%", height: 250 }} />
+        <Image
+          source={sonkeigo}
+          style={{ resizeMode: "contain", height: 200 }}
+        />
       </View>
       <View
         style={{
           backgroundColor: "rgba(254, 254, 254, 0.89)",
           padding: 10,
           borderRadius: 20,
-          width: "80%",
+          width: 350,
         }}
       >
         <Text

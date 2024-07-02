@@ -4,13 +4,7 @@ import { Image, Text, View } from "react-native";
 
 export default function Hokoku() {
   return (
-    <View
-      style={{
-        justifyContent: "center",
-        alignItems: "center",
-        gap: 20,
-      }}
-    >
+    <View style={{ rowGap: 20 }}>
       <Text
         style={{
           color: "#0E2540",
@@ -26,17 +20,18 @@ export default function Hokoku() {
           backgroundColor: "rgba(255, 222, 89, 0.89)",
           padding: 25,
           borderRadius: 20,
-          width: "80%",
+          width: 320,
+          alignItems:  "center",
         }}
       >
-        <Image source={hokoku} style={{ width: "100%", height: 250 }} />
+        <Image source={hokoku} style={{ resizeMode: "contain", height: 200 }} />
       </View>
       <View
         style={{
           backgroundColor: "rgba(255, 222, 89, 0.89)",
           padding: 10,
           borderRadius: 20,
-          width: "80%",
+          width: 320,
         }}
       >
         <Text
@@ -58,7 +53,7 @@ export default function Hokoku() {
           backgroundColor: "rgba(255, 222, 89, 0.89)",
           padding: 10,
           borderRadius: 20,
-          width: "80%",
+          width: 320,
         }}
       >
         <Text

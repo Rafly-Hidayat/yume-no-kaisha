@@ -34,25 +34,32 @@ export default function Sonkeigo() {
           flex: 1,
           justifyContent: "center",
           alignItems: "center",
-          gap: 24,
         }}
       >
-        {listPage[idxPage]}
         <View
           style={{
-            flexDirection: "row",
+            flexGrow: 1,
             justifyContent: "center",
             alignItems: "center",
-            columnGap: 40,
+            rowGap: 20,
           }}
         >
-          <TouchableOpacity onPress={PrevBtn}>
-            <AntDesign name="leftcircle" size={50} color="#0E2540" />
-          </TouchableOpacity>
-
-          <TouchableOpacity onPress={NextBtn}>
-            <AntDesign name="rightcircle" size={50} color="#0E2540" />
-          </TouchableOpacity>
+          {listPage[idxPage]}
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+              columnGap: 40,
+            }}
+          >
+            <TouchableOpacity onPress={PrevBtn}>
+              <AntDesign name="leftcircle" size={50} color="#0E2540" />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={NextBtn}>
+              <AntDesign name="rightcircle" size={50} color="#0E2540" />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </ImageBackground>
