@@ -1,6 +1,6 @@
 import {
   breakRoom,
-  company,
+  companyIcon,
   meetingRoom,
   officeRoom,
   receptionist,
@@ -13,7 +13,7 @@ import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 
 const listRoom = [
   { image: receptionist, japanese: "うけつけ", indonesian: "Resepsionis" },
-  { image: company, japanese: "かいしゃ", indonesian: "Perusahaan" },
+  { image: companyIcon, japanese: "かいしゃ", indonesian: "Perusahaan" },
   { image: officeRoom, japanese: "じむしつ", indonesian: "Ruang Kantor" },
   { image: meetingRoom, japanese: "かいぎしつ", indonesian: "Ruang Rapat" },
   {

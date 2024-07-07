@@ -49,7 +49,7 @@ const waitingRoom = require("@/assets/images/waitingRoom.png");
 const breakRoom = require("@/assets/images/breakRoom.png");
 const meetingRoom = require("@/assets/images/meetingRoom.png");
 const officeRoom = require("@/assets/images/officeRoom.png");
-const company = require("@/assets/images/company.png");
+const companyIcon = require("@/assets/images/companyIcon.png");
 const receptionist = require("@/assets/images/receptionist.png");
 const conversation1 = require("@/assets/images/conversation1.png");
 const conversation2 = require("@/assets/images/conversation2.png");
@@ -124,7 +124,7 @@ export {
   breakRoom,
   meetingRoom,
   officeRoom,
-  company,
+  companyIcon,
   receptionist,
   conversation1,
   conversation2,
